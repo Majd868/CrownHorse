@@ -1,4 +1,4 @@
-# # CrownHorse - Horse Services Platform
+# CrownHorse - Horse Services Platform
 
 A full-featured Android app (Java) for connecting horse owners with service providers and trainers.
 
