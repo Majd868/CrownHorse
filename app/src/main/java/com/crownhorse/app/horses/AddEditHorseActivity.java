@@ -139,20 +139,6 @@ public class AddEditHorseActivity extends AppCompatActivity {
     }
 
     private void persistHorse(Horse horse) {
-        HorseRepository.Callback<? super Object> cb = new HorseRepository.Callback<Object>() {
-            @Override
-            public void onSuccess(Object result) {
-                setLoading(false);
-                finish();
-            }
-
-            @Override
-            public void onFailure(Exception e) {
-                setLoading(false);
-                Toast.makeText(AddEditHorseActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        };
-
         if (existingHorse != null) {
             repository.updateHorse(horse, new HorseRepository.Callback<>() {
                 @Override public void onSuccess(Void r) { setLoading(false); finish(); }

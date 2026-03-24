@@ -55,13 +55,13 @@ public class OnboardingActivity extends AppCompatActivity {
         String country = spCountry.getSelectedItem().toString();
         String city = spCity.getSelectedItem().toString();
         String currency = spCurrency.getSelectedItem().toString();
-        String languageLabel = spLanguage.getSelectedItem().toString();
-
         String languageCode = "en";
-        if (languageLabel.equalsIgnoreCase("Arabic") || languageLabel.equalsIgnoreCase("عربي")) {
-            languageCode = "ar";
-        } else if (languageLabel.equalsIgnoreCase("Hebrew") || languageLabel.equalsIgnoreCase("עברית")) {
-            languageCode = "iw";
+        // Use spinner position to map to language code, matching the order in R.array.languages:
+        // 0=English, 1=Arabic, 2=Hebrew
+        final String[] languageCodes = {"en", "ar", "iw"};
+        int langPosition = spLanguage.getSelectedItemPosition();
+        if (langPosition >= 0 && langPosition < languageCodes.length) {
+            languageCode = languageCodes[langPosition];
         }
 
         String uid = FirebaseAuth.getInstance().getUid();
