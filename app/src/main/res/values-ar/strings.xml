@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">كراون هورس</string>
+    <string name="tagline">منصة خدمات الخيول</string>
+
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="sign_up">إنشاء حساب</string>
+    <string name="create_account">إنشاء حساب جديد</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="dont_have_account">ليس لديك حساب؟ سجّل الآن</string>
+    <string name="already_have_account">لديك حساب بالفعل؟ سجّل دخولك</string>
+
+    <string name="select_role">اختر دورك</string>
+    <string name="select_role_subtitle">أخبرنا كيف تستخدم كراون هورس</string>
+    <string name="horse_owner">صاحب خيول</string>
+    <string name="horse_owner_desc">أدر خيولك واحجز الخدمات</string>
+    <string name="service_provider">مزود خدمة / مدرب</string>
+    <string name="service_provider_desc">قدّم خدمات لأصحاب الخيول</string>
+
+    <string name="setup_profile">إعداد ملفك الشخصي</string>
+    <string name="country">البلد</string>
+    <string name="city">المدينة</string>
+    <string name="currency">العملة</string>
+    <string name="language">اللغة</string>
+    <string name="save_and_continue">حفظ ومتابعة</string>
+
+    <string name="horses">الخيول</string>
+    <string name="services">الخدمات</string>
+    <string name="bookings">الحجوزات</string>
+    <string name="chat">المحادثات</string>
+    <string name="profile">الملف الشخصي</string>
+
+    <string name="no_horses">لا توجد خيول حتى الآن. اضغط + لإضافة خيولك.</string>
+    <string name="horse_name">اسم الحصان</string>
+    <string name="age">العمر</string>
+    <string name="breed">السلالة / النوع</string>
+    <string name="description">الوصف</string>
+    <string name="horse_photo">صورة الحصان</string>
+    <string name="years_old">%d سنة</string>
+
+    <string name="no_services">لا توجد خدمات متاحة حتى الآن.</string>
+    <string name="service_name">اسم الخدمة</string>
+    <string name="price">السعر</string>
+    <string name="category">الفئة</string>
+    <string name="location">الموقع</string>
+    <string name="book_now">احجز الآن</string>
+    <string name="price_format">%.2f</string>
+
+    <string name="no_bookings">لا توجد حجوزات حتى الآن.</string>
+    <string name="select_horse">اختر الحصان</string>
+    <string name="select_service">اختر الخدمة</string>
+    <string name="select_trainer">اختر المدرب (اختياري)</string>
+    <string name="no_trainer">بدون مدرب</string>
+    <string name="date_time">التاريخ والوقت</string>
+    <string name="pick_date_time">اختر التاريخ والوقت</string>
+    <string name="confirm_booking">تأكيد الحجز</string>
+    <string name="service">الخدمة</string>
+    <string name="horse">الحصان</string>
+    <string name="status">الحالة</string>
+    <string name="confirm">تأكيد</string>
+    <string name="reject">رفض</string>
+
+    <string name="no_conversations">لا توجد محادثات حتى الآن.</string>
+    <string name="type_message">اكتب رسالة…</string>
+    <string name="send">إرسال</string>
+    <string name="attach_image">إرفاق صورة</string>
+    <string name="image">صورة</string>
+
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="sign_out">تسجيل الخروج</string>
+    <string name="save">حفظ</string>
+
+    <string name="error_fill_all_fields">يرجى ملء جميع الحقول المطلوبة</string>
+    <string name="error_passwords_mismatch">كلمات المرور غير متطابقة</string>
+    <string name="error_password_too_short">يجب أن تكون كلمة المرور 6 أحرف على الأقل</string>
+    <string name="error_unknown">حدث خطأ. يرجى المحاولة مجدداً.</string>
+    <string name="error_no_horses">يرجى إضافة حصان أولاً</string>
+    <string name="error_no_services">لا توجد خدمات متاحة</string>
+    <string name="error_select_datetime">يرجى تحديد التاريخ والوقت</string>
+
+    <string name="years_experience">%d سنة خبرة</string>
+</resources>

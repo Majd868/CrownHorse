@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countries">
+        <item>United Arab Emirates</item>
+        <item>Saudi Arabia</item>
+        <item>Israel</item>
+        <item>Jordan</item>
+        <item>Egypt</item>
+        <item>Kuwait</item>
+        <item>Qatar</item>
+        <item>Bahrain</item>
+        <item>Oman</item>
+        <item>United States</item>
+        <item>United Kingdom</item>
+        <item>Germany</item>
+        <item>France</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="cities">
+        <item>Dubai</item>
+        <item>Abu Dhabi</item>
+        <item>Riyadh</item>
+        <item>Jeddah</item>
+        <item>Tel Aviv</item>
+        <item>Jerusalem</item>
+        <item>Amman</item>
+        <item>Cairo</item>
+        <item>Kuwait City</item>
+        <item>Doha</item>
+        <item>Manama</item>
+        <item>Muscat</item>
+        <item>New York</item>
+        <item>London</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="currencies">
+        <item>USD</item>
+        <item>AED</item>
+        <item>SAR</item>
+        <item>ILS</item>
+        <item>JOD</item>
+        <item>EGP</item>
+        <item>KWD</item>
+        <item>QAR</item>
+        <item>BHD</item>
+        <item>OMR</item>
+        <item>GBP</item>
+        <item>EUR</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Arabic</item>
+        <item>Hebrew</item>
+    </string-array>
+</resources>

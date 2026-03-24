@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CrownHorse"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.CrownHorse.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".auth.SignInActivity" android:exported="false" />
+        <activity android:name=".auth.SignUpActivity" android:exported="false" />
+        <activity android:name=".auth.RoleSelectActivity" android:exported="false" />
+        <activity android:name=".auth.OnboardingActivity" android:exported="false" />
+        <activity android:name=".home.HomeActivity" android:exported="false" />
+        <activity android:name=".horses.AddEditHorseActivity" android:exported="false" />
+        <activity android:name=".services.ServiceDetailActivity" android:exported="false" />
+        <activity android:name=".services.AddEditServiceActivity" android:exported="false" />
+        <activity android:name=".bookings.CreateBookingActivity" android:exported="false" />
+        <activity android:name=".bookings.BookingDetailActivity" android:exported="false" />
+        <activity android:name=".chat.ChatActivity" android:exported="false" />
+        <activity android:name=".profile.EditProfileActivity" android:exported="false" />
+
+        <service
+            android:name=".fcm.CrownHorseFCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

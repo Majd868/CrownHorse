@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CrownHorse</string>
+    <string name="tagline">Your Horse Services Platform</string>
+
+    <!-- Auth -->
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+    <string name="already_have_account">Already have an account? Sign In</string>
+
+    <!-- Role Select -->
+    <string name="select_role">Choose Your Role</string>
+    <string name="select_role_subtitle">Tell us how you use CrownHorse</string>
+    <string name="horse_owner">Horse Owner</string>
+    <string name="horse_owner_desc">Manage your horses and book services</string>
+    <string name="service_provider">Service Provider / Trainer</string>
+    <string name="service_provider_desc">Offer services to horse owners</string>
+
+    <!-- Onboarding -->
+    <string name="setup_profile">Setup Your Profile</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="currency">Currency</string>
+    <string name="language">Language</string>
+    <string name="save_and_continue">Save &amp; Continue</string>
+
+    <!-- Home -->
+    <string name="horses">Horses</string>
+    <string name="services">Services</string>
+    <string name="bookings">Bookings</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+
+    <!-- Horses -->
+    <string name="no_horses">No horses yet. Tap + to add your first horse.</string>
+    <string name="horse_name">Horse Name</string>
+    <string name="age">Age</string>
+    <string name="breed">Breed / Type</string>
+    <string name="description">Description</string>
+    <string name="horse_photo">Horse Photo</string>
+    <string name="years_old">%d years old</string>
+
+    <!-- Services -->
+    <string name="no_services">No services available yet.</string>
+    <string name="service_name">Service Name</string>
+    <string name="price">Price</string>
+    <string name="category">Category</string>
+    <string name="location">Location</string>
+    <string name="book_now">Book Now</string>
+    <string name="price_format">%.2f</string>
+
+    <!-- Bookings -->
+    <string name="no_bookings">No bookings yet.</string>
+    <string name="select_horse">Select Horse</string>
+    <string name="select_service">Select Service</string>
+    <string name="select_trainer">Select Trainer (Optional)</string>
+    <string name="no_trainer">No Trainer</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="pick_date_time">Pick Date &amp; Time</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="service">Service</string>
+    <string name="horse">Horse</string>
+    <string name="status">Status</string>
+    <string name="confirm">Confirm</string>
+    <string name="reject">Reject</string>
+
+    <!-- Chat -->
+    <string name="no_conversations">No conversations yet.</string>
+    <string name="type_message">Type a message…</string>
+    <string name="send">Send</string>
+    <string name="attach_image">Attach Image</string>
+    <string name="image">Image</string>
+
+    <!-- Profile -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="save">Save</string>
+
+    <!-- Errors -->
+    <string name="error_fill_all_fields">Please fill in all required fields</string>
+    <string name="error_passwords_mismatch">Passwords do not match</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="error_unknown">An error occurred. Please try again.</string>
+    <string name="error_no_horses">Please add a horse first</string>
+    <string name="error_no_services">No services available</string>
+    <string name="error_select_datetime">Please select a date and time</string>
+
+    <!-- Trainer -->
+    <string name="years_experience">%d years experience</string>
+</resources>
