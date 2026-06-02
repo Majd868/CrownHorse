@@ -22,12 +22,14 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
     public interface OnHorseLongClickListener { void onLongClick(Horse horse); }
 
     private final List<Horse> horses;
+    private final String currentUid;
     private final OnHorseClickListener clickListener;
     private final OnHorseLongClickListener longClickListener;
 
-    public HorseAdapter(List<Horse> horses, OnHorseClickListener click,
+    public HorseAdapter(List<Horse> horses, String currentUid, OnHorseClickListener click,
                         OnHorseLongClickListener longClick) {
         this.horses = horses;
+        this.currentUid = currentUid;
         this.clickListener = click;
         this.longClickListener = longClick;
     }
@@ -47,6 +49,8 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
         holder.tvType.setText(horse.getType() != null ? horse.getType() : "");
         holder.tvAge.setText(holder.itemView.getContext()
                 .getString(R.string.years_old, horse.getAge()));
+        holder.tvPrice.setText(holder.itemView.getContext()
+                .getString(R.string.horse_price_format, horse.getPrice()));
 
         if (horse.getPhotoUrl() != null && !horse.getPhotoUrl().isEmpty()) {
             Glide.with(holder.itemView.getContext())
@@ -59,6 +63,9 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
 
         holder.itemView.setOnClickListener(v -> clickListener.onClick(horse));
         holder.itemView.setOnLongClickListener(v -> {
+            if (currentUid == null || !currentUid.equals(horse.getOwnerId())) {
+                return false;
+            }
             longClickListener.onLongClick(horse);
             return true;
         });
@@ -69,7 +76,7 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         CircleImageView ivPhoto;
-        TextView tvName, tvType, tvAge;
+        TextView tvName, tvType, tvAge, tvPrice;
 
         ViewHolder(View view) {
             super(view);
@@ -77,6 +84,7 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
             tvName = view.findViewById(R.id.tvName);
             tvType = view.findViewById(R.id.tvType);
             tvAge = view.findViewById(R.id.tvAge);
+            tvPrice = view.findViewById(R.id.tvPrice);
         }
     }
 }

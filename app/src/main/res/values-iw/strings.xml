@@ -33,13 +33,15 @@
     <string name="chat">צ\'אט</string>
     <string name="profile">פרופיל</string>
 
-    <string name="no_horses">אין סוסים עדיין. לחץ + להוסיף את הסוס הראשון שלך.</string>
+    <string name="no_horses">אין סוסים זמינים כרגע.</string>
     <string name="horse_name">שם הסוס</string>
     <string name="age">גיל</string>
     <string name="breed">גזע / סוג</string>
     <string name="description">תיאור</string>
     <string name="horse_photo">תמונת הסוס</string>
     <string name="years_old">%d שנים</string>
+    <string name="horse_sale_price">מחיר מכירה</string>
+    <string name="horse_price_format">מחיר: %.2f</string>
 
     <string name="no_services">אין שירותים זמינים עדיין.</string>
     <string name="service_name">שם השירות</string>
