@@ -15,7 +15,7 @@
 .codeGeneration
 
 # Firebase config (must not be committed)
-app/google-services.json
+# app/google-services.json
 
 # Key stores
 *.jks

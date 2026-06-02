@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_item_service.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\item_service.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_horse_logo.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_horse_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_item_message_received.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\item_message_received.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_badge_background.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\badge_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_chat.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_horses.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_horses.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_add_edit_service.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_add_edit_service.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_notification.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_fragment_horses.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\fragment_horses.xml"
+    },
+    {
+        "merged": "com.crownhorse.app-debug-43:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.crownhorse.app-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_add_edit_horse.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_add_edit_horse.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_item_message_sent.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\item_message_sent.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_profile_placeholder.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_profile_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_item_conversation.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\item_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_onboarding.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_bottom_nav_colors.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\bottom_nav_colors.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_edit_profile.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_sign_up.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_bubble_sent.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\bubble_sent.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_role_select.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_role_select.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_chat.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_booking_detail.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_booking_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_sign_in.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\mipmap-mdpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_fragment_services.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\fragment_services.xml"
+    },
+    {
+        "merged": "com.crownhorse.app-debug-43:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "com.crownhorse.app-main-45:/mipmap-mdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_fragment_chat_list.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\fragment_chat_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_item_booking.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\item_booking.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_services.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_services.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_create_booking.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_create_booking.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_service_detail.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_service_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_bubble_received.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\bubble_received.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_item_horse.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\item_horse.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_spinner_background.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\spinner_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_chat_input_background.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\chat_input_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_horse_placeholder.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_horse_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_bookings.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_bookings.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\layout_fragment_bookings.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\layout\\fragment_bookings.xml"
+    },
+    {
+        "merged": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-debug-43:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\emmaj\\.gradle\\daemon\\8.4\\com.crownhorse.app-main-45:\\drawable\\ic_profile.xml"
+    }
+]
