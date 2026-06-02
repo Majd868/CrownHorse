@@ -72,6 +72,21 @@ public class HorseRepository {
                 });
     }
 
+    public void getAllHorses(Callback<List<Horse>> callback) {
+        db.collection(COLLECTION).orderBy("createdAt").get()
+                .addOnSuccessListener(querySnapshot -> {
+                    List<Horse> horses = new ArrayList<>();
+                    for (var doc : querySnapshot.getDocuments()) {
+                        Horse h = doc.toObject(Horse.class);
+                        if (h != null) horses.add(h);
+                    }
+                    if (callback != null) callback.onSuccess(horses);
+                })
+                .addOnFailureListener(e -> {
+                    if (callback != null) callback.onFailure(e);
+                });
+    }
+
     public void uploadHorsePhoto(Uri imageUri, String horseId, Callback<String> callback) {
         StorageReference ref = storage.getReference().child("horses/" + horseId + ".jpg");
         ref.putFile(imageUri)

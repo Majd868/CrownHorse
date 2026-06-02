@@ -10,12 +10,15 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.crownhorse.app.R;
+import com.crownhorse.app.chat.ChatActivity;
 import com.crownhorse.app.models.Horse;
+import com.crownhorse.app.repository.ChatRepository;
 import com.crownhorse.app.repository.HorseRepository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -34,6 +37,7 @@ public class HorsesFragment extends Fragment {
     private TextView tvEmpty;
     private View progressBar;
     private FloatingActionButton fab;
+    private String currentUid;
 
     @Nullable
     @Override
@@ -48,15 +52,41 @@ public class HorsesFragment extends Fragment {
         tvEmpty = view.findViewById(R.id.tvEmpty);
         progressBar = view.findViewById(R.id.progressBar);
         fab = view.findViewById(R.id.fab);
+        currentUid = FirebaseAuth.getInstance().getUid();
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new HorseAdapter(horses,
+        adapter = new HorseAdapter(horses, currentUid,
                 horse -> {
-                    Intent intent = new Intent(getContext(), AddEditHorseActivity.class);
-                    intent.putExtra("horseId", horse.getHorseId());
-                    startActivity(intent);
+                    if (currentUid == null) return;
+                    if (currentUid.equals(horse.getOwnerId())) {
+                        Intent intent = new Intent(getContext(), AddEditHorseActivity.class);
+                        intent.putExtra("horseId", horse.getHorseId());
+                        startActivity(intent);
+                        return;
+                    }
+                    if (horse.getOwnerId() == null || horse.getOwnerId().isEmpty()) return;
+
+                    new ChatRepository().getOrCreateConversation(currentUid, horse.getOwnerId(),
+                            new ChatRepository.Callback<>() {
+                                @Override
+                                public void onSuccess(String conversationId) {
+                                    Intent intent = new Intent(getContext(), ChatActivity.class);
+                                    intent.putExtra("conversationId", conversationId);
+                                    startActivity(intent);
+                                }
+
+                                @Override
+                                public void onFailure(Exception e) {
+                                    if (getView() != null) {
+                                        Snackbar.make(getView(),
+                                                e.getMessage() != null ? e.getMessage() : "Error",
+                                                Snackbar.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
                 },
                 horse -> {
+                    if (currentUid == null || !currentUid.equals(horse.getOwnerId())) return;
                     new HorseRepository().deleteHorse(horse.getHorseId(), new HorseRepository.Callback<>() {
                         @Override
                         public void onSuccess(Void result) {
@@ -72,6 +102,28 @@ public class HorsesFragment extends Fragment {
                                         Snackbar.LENGTH_SHORT).show();
                         }
                     });
+                },
+                horse -> {
+                    // Buy Now button clicked
+                    if (currentUid == null) return;
+                    
+                    new AlertDialog.Builder(requireContext())
+                            .setTitle(horse.getName())
+                            .setMessage(getString(R.string.purchase_confirmation))
+                            .setPositiveButton(R.string.yes, (dialog, which) -> {
+                                // TODO: Implement purchase flow (e.g., payment processing)
+                                Snackbar.make(getView(), "Purchase initiated for " + horse.getName(),
+                                        Snackbar.LENGTH_SHORT).show();
+                                // For now, open chat to negotiate terms
+                                openChat(horse);
+                            })
+                            .setNegativeButton(R.string.no, null)
+                            .show();
+                },
+                horse -> {
+                    // Negotiate/Chat button clicked
+                    if (currentUid == null) return;
+                    openChat(horse);
                 });
         recyclerView.setAdapter(adapter);
 
@@ -85,6 +137,29 @@ public class HorsesFragment extends Fragment {
         loadHorses();
     }
 
+    private void openChat(Horse horse) {
+        if (currentUid == null) return;
+        
+        new ChatRepository().getOrCreateConversation(currentUid, horse.getOwnerId(),
+                new ChatRepository.Callback<>() {
+                    @Override
+                    public void onSuccess(String conversationId) {
+                        Intent intent = new Intent(getContext(), ChatActivity.class);
+                        intent.putExtra("conversationId", conversationId);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onFailure(Exception e) {
+                        if (getView() != null) {
+                            Snackbar.make(getView(),
+                                    e.getMessage() != null ? e.getMessage() : "Error",
+                                    Snackbar.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -92,11 +167,10 @@ public class HorsesFragment extends Fragment {
     }
 
     private void loadHorses() {
-        String uid = FirebaseAuth.getInstance().getUid();
-        if (uid == null) return;
+        if (currentUid == null) return;
 
         progressBar.setVisibility(View.VISIBLE);
-        new HorseRepository().getHorsesByOwner(uid, new HorseRepository.Callback<>() {
+        new HorseRepository().getAllHorses(new HorseRepository.Callback<>() {
             @Override
             public void onSuccess(List<Horse> result) {
                 progressBar.setVisibility(View.GONE);

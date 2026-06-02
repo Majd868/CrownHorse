@@ -30,7 +30,7 @@ import java.io.IOException;
 
 public class AddEditHorseActivity extends AppCompatActivity {
 
-    private TextInputEditText etName, etAge, etType, etDescription;
+    private TextInputEditText etName, etAge, etType, etPrice, etDescription;
     private ImageView ivPhoto;
     private Button btnSave;
     private View progressBar;
@@ -76,6 +76,7 @@ public class AddEditHorseActivity extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         etAge = findViewById(R.id.etAge);
         etType = findViewById(R.id.etType);
+        etPrice = findViewById(R.id.etPrice);
         etDescription = findViewById(R.id.etDescription);
         ivPhoto = findViewById(R.id.ivPhoto);
         btnSave = findViewById(R.id.btnSave);
@@ -110,6 +111,7 @@ public class AddEditHorseActivity extends AppCompatActivity {
         etName.setText(horse.getName());
         etAge.setText(String.valueOf(horse.getAge()));
         etType.setText(horse.getType());
+        etPrice.setText(String.valueOf(horse.getPrice()));
         etDescription.setText(horse.getDescription());
         if (horse.getPhotoUrl() != null && !horse.getPhotoUrl().isEmpty()) {
             Glide.with(this).load(horse.getPhotoUrl())
@@ -121,15 +123,18 @@ public class AddEditHorseActivity extends AppCompatActivity {
         String name = etName.getText() != null ? etName.getText().toString().trim() : "";
         String ageStr = etAge.getText() != null ? etAge.getText().toString().trim() : "";
         String type = etType.getText() != null ? etType.getText().toString().trim() : "";
+        String priceStr = etPrice.getText() != null ? etPrice.getText().toString().trim() : "";
         String desc = etDescription.getText() != null ? etDescription.getText().toString().trim() : "";
 
-        if (name.isEmpty() || ageStr.isEmpty()) {
+        if (name.isEmpty() || ageStr.isEmpty() || priceStr.isEmpty()) {
             Toast.makeText(this, R.string.error_fill_all_fields, Toast.LENGTH_SHORT).show();
             return;
         }
 
         int age;
         try { age = Integer.parseInt(ageStr); } catch (NumberFormatException e) { age = 0; }
+        double price;
+        try { price = Double.parseDouble(priceStr); } catch (NumberFormatException e) { price = 0; }
 
         String uid = FirebaseAuth.getInstance().getUid();
         if (uid == null) return;
@@ -138,6 +143,7 @@ public class AddEditHorseActivity extends AppCompatActivity {
         horse.setName(name);
         horse.setAge(age);
         horse.setType(type);
+        horse.setPrice(price);
         horse.setDescription(desc);
         horse.setOwnerId(uid);
         if (horse.getCreatedAt() == 0) horse.setCreatedAt(System.currentTimeMillis());
