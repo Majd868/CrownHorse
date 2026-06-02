@@ -7,8 +7,10 @@
     <string name="book_now">הזמן עכשיו</string>
     <string name="bookings">הזמנות</string>
     <string name="breed">גזע / סוג</string>
+    <string name="camera_permission_denied">נדרשת הרשאת מצלמה לצילום תמונה</string>
     <string name="category">קטגוריה</string>
     <string name="chat">צ\'אט</string>
+    <string name="choose_image_source">בחר מקור תמונה</string>
     <string name="city">עיר</string>
     <string name="confirm">אישור</string>
     <string name="confirm_booking">אשר הזמנה</string>
@@ -24,6 +26,7 @@
     <string name="error_fill_all_fields">אנא מלא את כל השדות הנדרשים</string>
     <string name="error_no_horses">אנא הוסף סוס תחילה</string>
     <string name="error_no_services">אין שירותים זמינים</string>
+    <string name="error_open_camera">לא ניתן לפתוח את המצלמה</string>
     <string name="error_password_too_short">הסיסמה חייבת להכיל לפחות 6 תווים</string>
     <string name="error_passwords_mismatch">הסיסמאות אינן תואמות</string>
     <string name="error_select_datetime">אנא בחר תאריך ושעה</string>
@@ -44,6 +47,8 @@
     <string name="no_services">אין שירותים זמינים עדיין.</string>
     <string name="no_trainer">ללא מאמן</string>
     <string name="password">סיסמה</string>
+    <string name="photo_source_camera">צלם תמונה</string>
+    <string name="photo_source_gallery">בחר מהגלריה</string>
     <string name="pick_date_time">בחר תאריך ושעה</string>
     <string name="price">מחיר</string>
     <string name="price_format">%.2f</string>

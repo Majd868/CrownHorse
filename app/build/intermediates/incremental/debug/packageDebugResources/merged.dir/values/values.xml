@@ -81,8 +81,10 @@
     <string name="book_now">Book Now</string>
     <string name="bookings">Bookings</string>
     <string name="breed">Breed / Type</string>
+    <string name="camera_permission_denied">Camera permission is required to take a photo</string>
     <string name="category">Category</string>
     <string name="chat">Chat</string>
+    <string name="choose_image_source">Choose image source</string>
     <string name="city">City</string>
     <string name="confirm">Confirm</string>
     <string name="confirm_booking">Confirm Booking</string>
@@ -98,6 +100,7 @@
     <string name="error_fill_all_fields">Please fill in all required fields</string>
     <string name="error_no_horses">Please add a horse first</string>
     <string name="error_no_services">No services available</string>
+    <string name="error_open_camera">Unable to open camera</string>
     <string name="error_password_too_short">Password must be at least 6 characters</string>
     <string name="error_passwords_mismatch">Passwords do not match</string>
     <string name="error_select_datetime">Please select a date and time</string>
@@ -123,6 +126,8 @@
     <string name="no_services">No services available yet.</string>
     <string name="no_trainer">No Trainer</string>
     <string name="password">Password</string>
+    <string name="photo_source_camera">Take photo</string>
+    <string name="photo_source_gallery">Choose from gallery</string>
     <string name="pick_date_time">Pick Date &amp; Time</string>
     <string name="price">Price</string>
     <string name="price_format">%.2f</string>

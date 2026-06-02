@@ -140,8 +140,10 @@ string attach_image
 string book_now
 string bookings
 string breed
+string camera_permission_denied
 string category
 string chat
+string choose_image_source
 string city
 string confirm
 string confirm_booking
@@ -157,6 +159,7 @@ string email
 string error_fill_all_fields
 string error_no_horses
 string error_no_services
+string error_open_camera
 string error_password_too_short
 string error_passwords_mismatch
 string error_select_datetime
@@ -182,6 +185,8 @@ string no_horses
 string no_services
 string no_trainer
 string password
+string photo_source_camera
+string photo_source_gallery
 string pick_date_time
 string price
 string price_format
@@ -214,3 +219,4 @@ style Theme.CrownHorse
 style Theme.CrownHorse.Splash
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

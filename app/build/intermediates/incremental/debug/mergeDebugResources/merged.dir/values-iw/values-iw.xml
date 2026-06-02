@@ -53,10 +53,12 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"שיחה נכנסת"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"שיחה פעילה"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"סינון שיחה נכנסת"</string>
+    <string name="camera_permission_denied">נדרשת הרשאת מצלמה לצילום תמונה</string>
     <string name="category">קטגוריה</string>
     <string name="character_counter_content_description">הוזנו %1$d תווים מתוך %2$d</string>
     <string name="character_counter_overflowed_content_description">מגבלת התווים חורגת ב-%1$d מתוך %2$d</string>
     <string name="chat">צ\'אט</string>
+    <string name="choose_image_source">בחר מקור תמונה</string>
     <string name="city">עיר</string>
     <string name="clear_text_end_icon_content_description">מחיקת הטקסט</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">הפעל</string>
@@ -94,6 +96,7 @@
     <string name="error_icon_content_description">שגיאה</string>
     <string name="error_no_horses">אנא הוסף סוס תחילה</string>
     <string name="error_no_services">אין שירותים זמינים</string>
+    <string name="error_open_camera">לא ניתן לפתוח את המצלמה</string>
     <string name="error_password_too_short">הסיסמה חייבת להכיל לפחות 6 תווים</string>
     <string name="error_passwords_mismatch">הסיסמאות אינן תואמות</string>
     <string name="error_select_datetime">אנא בחר תאריך ושעה</string>
@@ -179,6 +182,8 @@
     <string name="no_trainer">ללא מאמן</string>
     <string name="password">סיסמה</string>
     <string name="password_toggle_content_description">הצגת סיסמה</string>
+    <string name="photo_source_camera">צלם תמונה</string>
+    <string name="photo_source_gallery">בחר מהגלריה</string>
     <string name="pick_date_time">בחר תאריך ושעה</string>
     <string name="price">מחיר</string>
     <string name="price_format">%.2f</string>

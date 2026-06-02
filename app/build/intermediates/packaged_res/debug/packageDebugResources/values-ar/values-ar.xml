@@ -7,8 +7,10 @@
     <string name="book_now">احجز الآن</string>
     <string name="bookings">الحجوزات</string>
     <string name="breed">السلالة / النوع</string>
+    <string name="camera_permission_denied">مطلوب إذن الكاميرا لالتقاط صورة</string>
     <string name="category">الفئة</string>
     <string name="chat">المحادثات</string>
+    <string name="choose_image_source">اختر مصدر الصورة</string>
     <string name="city">المدينة</string>
     <string name="confirm">تأكيد</string>
     <string name="confirm_booking">تأكيد الحجز</string>
@@ -24,6 +26,7 @@
     <string name="error_fill_all_fields">يرجى ملء جميع الحقول المطلوبة</string>
     <string name="error_no_horses">يرجى إضافة حصان أولاً</string>
     <string name="error_no_services">لا توجد خدمات متاحة</string>
+    <string name="error_open_camera">تعذر فتح الكاميرا</string>
     <string name="error_password_too_short">يجب أن تكون كلمة المرور 6 أحرف على الأقل</string>
     <string name="error_passwords_mismatch">كلمات المرور غير متطابقة</string>
     <string name="error_select_datetime">يرجى تحديد التاريخ والوقت</string>
@@ -44,6 +47,8 @@
     <string name="no_services">لا توجد خدمات متاحة حتى الآن.</string>
     <string name="no_trainer">بدون مدرب</string>
     <string name="password">كلمة المرور</string>
+    <string name="photo_source_camera">التقاط صورة</string>
+    <string name="photo_source_gallery">اختيار من المعرض</string>
     <string name="pick_date_time">اختر التاريخ والوقت</string>
     <string name="price">السعر</string>
     <string name="price_format">%.2f</string>

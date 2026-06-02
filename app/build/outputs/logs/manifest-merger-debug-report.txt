@@ -1,9 +1,20 @@
 -- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:48:9-56:20
+	android:grantUriPermissions
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:52:13-47
+	android:authorities
+		INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:50:13-64
+	android:exported
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:51:13-37
+	android:name
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:49:13-62
 manifest
-ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-56:12
-INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-56:12
+ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:2:1-66:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\emmaj\.gradle\caches\transforms-3\df5c709dbe900686281d0feb0e8e74fc\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\emmaj\.gradle\caches\transforms-3\08a34d3a00d7ffd719b6563610376871\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\emmaj\.gradle\caches\transforms-3\4d295eaed72f1065cb4da5db3b19af7d\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -148,8 +159,8 @@ ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest
 	android:name
 		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:13:22-63
 application
-ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:15:5-55:19
-INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:15:5-55:19
+ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:15:5-65:19
+INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:15:5-65:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\emmaj\.gradle\caches\transforms-3\df5c709dbe900686281d0feb0e8e74fc\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\emmaj\.gradle\caches\transforms-3\df5c709dbe900686281d0feb0e8e74fc\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\emmaj\.gradle\caches\transforms-3\08a34d3a00d7ffd719b6563610376871\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -325,17 +336,23 @@ ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest
 	android:name
 		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:46:19-62
 service#com.crownhorse.app.fcm.CrownHorseFCMService
-ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:48:9-54:19
+ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:58:9-64:19
 	android:exported
-		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:50:13-37
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:49:13-53
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:59:13-53
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:51:13-53:29
+ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:61:13-63:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:52:17-78
+ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:62:17-78
 	android:name
-		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:52:25-75
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:62:25-75
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:53:13-55:54
+	android:resource
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:55:17-51
+	android:name
+		ADDED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml:54:17-67
 uses-sdk
 INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\emmaj\StudioProjects\CrownHorse\app\src\main\AndroidManifest.xml

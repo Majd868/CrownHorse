@@ -4039,11 +4039,13 @@ string call_notification_hang_up_action
 string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
+string camera_permission_denied
 string category
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chat
+string choose_image_source
 string city
 string clear_text_end_icon_content_description
 string common_google_play_services_enable_button
@@ -4081,6 +4083,7 @@ string error_fill_all_fields
 string error_icon_content_description
 string error_no_horses
 string error_no_services
+string error_open_camera
 string error_password_too_short
 string error_passwords_mismatch
 string error_select_datetime
@@ -4221,6 +4224,8 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string photo_source_camera
+string photo_source_gallery
 string pick_date_time
 string price
 string price_format
@@ -5543,4 +5548,5 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
+xml file_paths
 xml image_share_filepaths
