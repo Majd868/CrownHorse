@@ -103,11 +103,11 @@
     <string name="error_select_datetime">Please select a date and time</string>
     <string name="error_unknown">An error occurred. Please try again.</string>
     <string name="full_name">Full Name</string>
-    <string name="gcm_defaultSenderId" translatable="false">123456789012</string>
-    <string name="google_api_key" translatable="false">AIzaSyPlaceholderKey_For_Build_Purposes</string>
-    <string name="google_app_id" translatable="false">1:123456789012:android:0123456789abcdef</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyPlaceholderKey_For_Build_Purposes</string>
-    <string name="google_storage_bucket" translatable="false">crown-horse-app.appspot.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1097763691679</string>
+    <string name="google_api_key" translatable="false">AIzaSyARdyTc0rGUvHvbo9Ea30vpE8jDZGVM4yk</string>
+    <string name="google_app_id" translatable="false">1:1097763691679:android:3e8795b30728f3557396aa</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyARdyTc0rGUvHvbo9Ea30vpE8jDZGVM4yk</string>
+    <string name="google_storage_bucket" translatable="false">crownhorse-900e8.firebasestorage.app</string>
     <string name="horse">Horse</string>
     <string name="horse_name">Horse Name</string>
     <string name="horse_owner">Horse Owner</string>
@@ -127,7 +127,7 @@
     <string name="price">Price</string>
     <string name="price_format">%.2f</string>
     <string name="profile">Profile</string>
-    <string name="project_id" translatable="false">crown-horse-app</string>
+    <string name="project_id" translatable="false">crownhorse-900e8</string>
     <string name="reject">Reject</string>
     <string name="save">Save</string>
     <string name="save_and_continue">Save &amp; Continue</string>

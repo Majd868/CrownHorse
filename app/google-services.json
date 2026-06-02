@@ -1,20 +1,21 @@
 {
   "project_info": {
-    "project_number": "123456789012",
-    "project_id": "crown-horse-app",
-    "storage_bucket": "crown-horse-app.appspot.com"
+    "project_number": "1097763691679",
+    "project_id": "crownhorse-900e8",
+    "storage_bucket": "crownhorse-900e8.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:123456789012:android:0123456789abcdef",
+        "mobilesdk_app_id": "1:1097763691679:android:3e8795b30728f3557396aa",
         "android_client_info": {
           "package_name": "com.crownhorse.app"
         }
       },
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyPlaceholderKey_For_Build_Purposes"
+          "current_key": "AIzaSyARdyTc0rGUvHvbo9Ea30vpE8jDZGVM4yk"
         }
       ],
       "services": {
