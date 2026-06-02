@@ -1,23 +1,32 @@
 package com.crownhorse.app.horses;
 
+import android.Manifest;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.content.pm.PackageManager;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 
 import com.bumptech.glide.Glide;
+import com.crownhorse.app.BuildConfig;
 import com.crownhorse.app.R;
 import com.crownhorse.app.models.Horse;
 import com.crownhorse.app.repository.HorseRepository;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.io.File;
+import java.io.IOException;
 
 public class AddEditHorseActivity extends AppCompatActivity {
 
@@ -26,6 +35,7 @@ public class AddEditHorseActivity extends AppCompatActivity {
     private Button btnSave;
     private View progressBar;
     private Uri selectedImageUri;
+    private Uri pendingCameraImageUri;
     private Horse existingHorse;
     private final HorseRepository repository = new HorseRepository();
 
@@ -34,6 +44,23 @@ public class AddEditHorseActivity extends AppCompatActivity {
                 if (uri != null) {
                     selectedImageUri = uri;
                     Glide.with(this).load(uri).into(ivPhoto);
+                }
+            });
+    private final ActivityResultLauncher<Uri> cameraLauncher =
+            registerForActivityResult(new ActivityResultContracts.TakePicture(), success -> {
+                if (success && pendingCameraImageUri != null) {
+                    selectedImageUri = pendingCameraImageUri;
+                    Glide.with(this).load(pendingCameraImageUri).into(ivPhoto);
+                }
+                pendingCameraImageUri = null;
+            });
+
+    private final ActivityResultLauncher<String> cameraPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+                if (granted) {
+                    openCamera();
+                } else {
+                    Toast.makeText(this, R.string.camera_permission_denied, Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -54,7 +81,7 @@ public class AddEditHorseActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
         progressBar = findViewById(R.id.progressBar);
 
-        ivPhoto.setOnClickListener(v -> imagePickerLauncher.launch("image/*"));
+        ivPhoto.setOnClickListener(v -> showImageSourceDialog());
         btnSave.setOnClickListener(v -> saveHorse());
 
         String horseId = getIntent().getStringExtra("horseId");
@@ -136,6 +163,56 @@ public class AddEditHorseActivity extends AppCompatActivity {
         } else {
             persistHorse(horse);
         }
+    }
+
+    private void showImageSourceDialog() {
+        CharSequence[] items = {
+                getString(R.string.photo_source_camera),
+                getString(R.string.photo_source_gallery)
+        };
+
+        new MaterialAlertDialogBuilder(this)
+                .setTitle(R.string.choose_image_source)
+                .setItems(items, (dialog, which) -> {
+                    if (which == 0) {
+                        checkCameraPermissionAndOpen();
+                    } else {
+                        imagePickerLauncher.launch("image/*");
+                    }
+                })
+                .show();
+    }
+
+    private void checkCameraPermissionAndOpen() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                == PackageManager.PERMISSION_GRANTED) {
+            openCamera();
+        } else {
+            cameraPermissionLauncher.launch(Manifest.permission.CAMERA);
+        }
+    }
+
+    private void openCamera() {
+        try {
+            File imageFile = createTempImageFile();
+            pendingCameraImageUri = FileProvider.getUriForFile(
+                    this,
+                    BuildConfig.APPLICATION_ID + ".fileprovider",
+                    imageFile
+            );
+            cameraLauncher.launch(pendingCameraImageUri);
+        } catch (IOException | IllegalArgumentException e) {
+            pendingCameraImageUri = null;
+            Toast.makeText(this, R.string.error_open_camera, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private File createTempImageFile() throws IOException {
+        File dir = new File(getCacheDir(), "images");
+        if (!dir.exists() && !dir.mkdirs()) {
+            throw new IOException("Failed to create image directory");
+        }
+        return File.createTempFile("horse_", ".jpg", dir);
     }
 
     private void persistHorse(Horse horse) {
