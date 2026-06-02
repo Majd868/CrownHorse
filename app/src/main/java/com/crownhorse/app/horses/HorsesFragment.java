@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -101,6 +102,28 @@ public class HorsesFragment extends Fragment {
                                         Snackbar.LENGTH_SHORT).show();
                         }
                     });
+                },
+                horse -> {
+                    // Buy Now button clicked
+                    if (currentUid == null) return;
+                    
+                    new AlertDialog.Builder(requireContext())
+                            .setTitle(horse.getName())
+                            .setMessage(getString(R.string.purchase_confirmation))
+                            .setPositiveButton(R.string.yes, (dialog, which) -> {
+                                // TODO: Implement purchase flow (e.g., payment processing)
+                                Snackbar.make(getView(), "Purchase initiated for " + horse.getName(),
+                                        Snackbar.LENGTH_SHORT).show();
+                                // For now, open chat to negotiate terms
+                                openChat(horse);
+                            })
+                            .setNegativeButton(R.string.no, null)
+                            .show();
+                },
+                horse -> {
+                    // Negotiate/Chat button clicked
+                    if (currentUid == null) return;
+                    openChat(horse);
                 });
         recyclerView.setAdapter(adapter);
 
@@ -112,6 +135,29 @@ public class HorsesFragment extends Fragment {
                 startActivity(new Intent(getContext(), AddEditHorseActivity.class)));
 
         loadHorses();
+    }
+
+    private void openChat(Horse horse) {
+        if (currentUid == null) return;
+        
+        new ChatRepository().getOrCreateConversation(currentUid, horse.getOwnerId(),
+                new ChatRepository.Callback<>() {
+                    @Override
+                    public void onSuccess(String conversationId) {
+                        Intent intent = new Intent(getContext(), ChatActivity.class);
+                        intent.putExtra("conversationId", conversationId);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onFailure(Exception e) {
+                        if (getView() != null) {
+                            Snackbar.make(getView(),
+                                    e.getMessage() != null ? e.getMessage() : "Error",
+                                    Snackbar.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     @Override

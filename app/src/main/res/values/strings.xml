@@ -95,4 +95,12 @@
 
     <!-- Trainer -->
     <string name="years_experience">%d years experience</string>
+
+    <!-- Horse Marketplace -->
+    <string name="buy_now">Buy Now</string>
+    <string name="negotiate">Negotiate</string>
+    <string name="purchase_confirmation">Are you sure you want to buy this horse?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
 </resources>
