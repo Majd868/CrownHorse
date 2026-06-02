@@ -39,6 +39,11 @@
     <string name="breed">גזע / סוג</string>
     <string name="description">תיאור</string>
     <string name="horse_photo">תמונת הסוס</string>
+    <string name="choose_image_source">בחר מקור תמונה</string>
+    <string name="photo_source_camera">צלם תמונה</string>
+    <string name="photo_source_gallery">בחר מהגלריה</string>
+    <string name="camera_permission_denied">נדרשת הרשאת מצלמה לצילום תמונה</string>
+    <string name="error_open_camera">לא ניתן לפתוח את המצלמה</string>
     <string name="years_old">%d שנים</string>
 
     <string name="no_services">אין שירותים זמינים עדיין.</string>

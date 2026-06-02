@@ -44,6 +44,11 @@
     <string name="breed">Breed / Type</string>
     <string name="description">Description</string>
     <string name="horse_photo">Horse Photo</string>
+    <string name="choose_image_source">Choose image source</string>
+    <string name="photo_source_camera">Take photo</string>
+    <string name="photo_source_gallery">Choose from gallery</string>
+    <string name="camera_permission_denied">Camera permission is required to take a photo</string>
+    <string name="error_open_camera">Unable to open camera</string>
     <string name="years_old">%d years old</string>
 
     <!-- Services -->
