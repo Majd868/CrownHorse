@@ -32,7 +32,7 @@ public class AddEditHorseActivity extends AppCompatActivity {
 
     private TextInputEditText etName, etAge, etType, etDescription;
     private ImageView ivPhoto;
-    private Button btnSave;
+    private  Button btnSave;
     private View progressBar;
     private Uri selectedImageUri;
     private Uri pendingCameraImageUri;
