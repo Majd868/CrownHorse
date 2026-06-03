@@ -7,6 +7,7 @@ public class Horse {
     private int age;
     private String type;
     private String description;
+    private double price;
     private String photoUrl;
     private long createdAt;
 
@@ -41,6 +42,9 @@ public class Horse {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
 
     public String getPhotoUrl() { return photoUrl; }
     public void setPhotoUrl(String photoUrl) { this.photoUrl = photoUrl; }

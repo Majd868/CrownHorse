@@ -33,7 +33,7 @@
     <string name="chat">المحادثات</string>
     <string name="profile">الملف الشخصي</string>
 
-    <string name="no_horses">لا توجد خيول حتى الآن. اضغط + لإضافة خيولك.</string>
+    <string name="no_horses">لا توجد خيول معروضة حالياً.</string>
     <string name="horse_name">اسم الحصان</string>
     <string name="age">العمر</string>
     <string name="breed">السلالة / النوع</string>
@@ -45,6 +45,8 @@
     <string name="camera_permission_denied">مطلوب إذن الكاميرا لالتقاط صورة</string>
     <string name="error_open_camera">تعذر فتح الكاميرا</string>
     <string name="years_old">%d سنة</string>
+    <string name="horse_sale_price">سعر البيع</string>
+    <string name="horse_price_format">السعر: %.2f</string>
 
     <string name="no_services">لا توجد خدمات متاحة حتى الآن.</string>
     <string name="service_name">اسم الخدمة</string>

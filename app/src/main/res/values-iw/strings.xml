@@ -33,7 +33,7 @@
     <string name="chat">צ\'אט</string>
     <string name="profile">פרופיל</string>
 
-    <string name="no_horses">אין סוסים עדיין. לחץ + להוסיף את הסוס הראשון שלך.</string>
+    <string name="no_horses">אין סוסים זמינים כרגע.</string>
     <string name="horse_name">שם הסוס</string>
     <string name="age">גיל</string>
     <string name="breed">גזע / סוג</string>
@@ -45,6 +45,8 @@
     <string name="camera_permission_denied">נדרשת הרשאת מצלמה לצילום תמונה</string>
     <string name="error_open_camera">לא ניתן לפתוח את המצלמה</string>
     <string name="years_old">%d שנים</string>
+    <string name="horse_sale_price">מחיר מכירה</string>
+    <string name="horse_price_format">מחיר: %.2f</string>
 
     <string name="no_services">אין שירותים זמינים עדיין.</string>
     <string name="service_name">שם השירות</string>

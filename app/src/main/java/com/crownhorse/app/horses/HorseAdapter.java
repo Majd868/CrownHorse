@@ -3,6 +3,7 @@ package com.crownhorse.app.horses;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.crownhorse.app.R;
 import com.crownhorse.app.models.Horse;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 
@@ -20,16 +22,25 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
 
     public interface OnHorseClickListener { void onClick(Horse horse); }
     public interface OnHorseLongClickListener { void onLongClick(Horse horse); }
+    public interface OnBuyClickListener { void onClick(Horse horse); }
+    public interface OnNegotiateClickListener { void onClick(Horse horse); }
 
     private final List<Horse> horses;
+    private final String currentUid;
     private final OnHorseClickListener clickListener;
     private final OnHorseLongClickListener longClickListener;
+    private final OnBuyClickListener buyClickListener;
+    private final OnNegotiateClickListener negotiateClickListener;
 
-    public HorseAdapter(List<Horse> horses, OnHorseClickListener click,
-                        OnHorseLongClickListener longClick) {
+    public HorseAdapter(List<Horse> horses, String currentUid, OnHorseClickListener click,
+                        OnHorseLongClickListener longClick,
+                        OnBuyClickListener buyClick, OnNegotiateClickListener negotiateClick) {
         this.horses = horses;
+        this.currentUid = currentUid;
         this.clickListener = click;
         this.longClickListener = longClick;
+        this.buyClickListener = buyClick;
+        this.negotiateClickListener = negotiateClick;
     }
 
     @NonNull
@@ -47,6 +58,8 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
         holder.tvType.setText(horse.getType() != null ? horse.getType() : "");
         holder.tvAge.setText(holder.itemView.getContext()
                 .getString(R.string.years_old, horse.getAge()));
+        holder.tvPrice.setText(holder.itemView.getContext()
+                .getString(R.string.horse_price_format, horse.getPrice()));
 
         if (horse.getPhotoUrl() != null && !horse.getPhotoUrl().isEmpty()) {
             Glide.with(holder.itemView.getContext())
@@ -57,8 +70,21 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
             holder.ivPhoto.setImageResource(R.drawable.ic_horse_placeholder);
         }
 
+        // Check if current user is the owner
+        boolean isOwner = currentUid != null && currentUid.equals(horse.getOwnerId());
+        
+        // Show action buttons only for non-owners
+        holder.llActionButtons.setVisibility(isOwner ? View.GONE : View.VISIBLE);
+        
+        // Set up button click listeners
+        holder.btnBuyNow.setOnClickListener(v -> buyClickListener.onClick(horse));
+        holder.btnNegotiate.setOnClickListener(v -> negotiateClickListener.onClick(horse));
+
         holder.itemView.setOnClickListener(v -> clickListener.onClick(horse));
         holder.itemView.setOnLongClickListener(v -> {
+            if (currentUid == null || !currentUid.equals(horse.getOwnerId())) {
+                return false;
+            }
             longClickListener.onLongClick(horse);
             return true;
         });
@@ -69,7 +95,9 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         CircleImageView ivPhoto;
-        TextView tvName, tvType, tvAge;
+        TextView tvName, tvType, tvAge, tvPrice;
+        LinearLayout llActionButtons;
+        MaterialButton btnBuyNow, btnNegotiate;
 
         ViewHolder(View view) {
             super(view);
@@ -77,6 +105,10 @@ public class HorseAdapter extends RecyclerView.Adapter<HorseAdapter.ViewHolder> 
             tvName = view.findViewById(R.id.tvName);
             tvType = view.findViewById(R.id.tvType);
             tvAge = view.findViewById(R.id.tvAge);
+            tvPrice = view.findViewById(R.id.tvPrice);
+            llActionButtons = view.findViewById(R.id.llActionButtons);
+            btnBuyNow = view.findViewById(R.id.btnBuyNow);
+            btnNegotiate = view.findViewById(R.id.btnNegotiate);
         }
     }
 }
